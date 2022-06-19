@@ -1,3 +1,4 @@
+const { expect } = require("chai");
 const chai = require("chai");
 global.expect = chai.expect;
 const hasTargetSum = require("../index");
@@ -23,5 +24,8 @@ describe("hasTargetSum", () => {
   });
   it("returns false when the array is [4] and the target is 4", () => {
     expect(hasTargetSum([4], 5)).to.be.false;
+  });
+  it("returns false when the array is [1, 2, 3, 4] and the target is 8", () => {
+    expect(hasTargetSum([1, 2, 3, 4])).to.be.false;
   });
 });
